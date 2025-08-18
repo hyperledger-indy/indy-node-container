@@ -28,7 +28,7 @@ jobs:
         os_version: [ debian11, ubuntu20 ]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: indy-node-version
         id: indy-node-version
         shell: bash
