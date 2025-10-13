@@ -28,7 +28,7 @@ jobs:
         os_version: [ debian11, ubuntu20 ]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: indy-node-version
         id: indy-node-version
         shell: bash
@@ -61,7 +61,7 @@ jobs:
           retention-days: 8
 
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: 'trivy-indy-node-${{ steps.indy-node-version.outputs.nodeVersion }}-${{ matrix.os_version }}.sarif'
 
