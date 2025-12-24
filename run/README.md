@@ -13,7 +13,7 @@ This is a brief step by step guide for what to do if you want to add a container
 Just clone the whole repository and generate a seed
 
 ```
-git clone https://github.com/hyperledger/indy-node-container.git
+git clone https://github.com/hyperledger-indy/indy-node-container.git
 cd indy-node-container/run/
 ./generate_random_seeds.sh 
 ```
@@ -22,7 +22,7 @@ and then securely backup `.node.env` which holds the seed for generating the pri
 
 Change the network name in `etc_indy/indy_config.py` to `NETWORK_NAME = 'YOUR_NETWORK_NAME'` and in `.env` to `INDY_NETWORK_NAME=YOUR_NETWORK_NAME`. In the latter, also set the `INDY_NODE_NAME` to your nodes alias.  
 
-You may choose [an image](https://github.com/hyperledger/indy-node-container/pkgs/container/indy-node-container%2Findy_node/versions) to use or stick with the default.
+You may choose [an image](https://github.com/hyperledger-indy/indy-node-container/pkgs/container/indy-node-container%2Findy_node/versions) to use or stick with the default.
 - **Caution**: The ubunut20 image is a test image to test the new release candidate of indy node. All other images are stable.
 
 

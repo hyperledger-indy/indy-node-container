@@ -1,12 +1,12 @@
 # This container is to run indy-node.
-# This file is part of https://github.com/hyperledger/indy-node-container .
-# Copyright 2021-2025 by all people listed in https://github.com/hyperledger/indy-node-container/blob/main/NOTICE , see
-# https://github.com/hyperledger/indy-node-container/blob/main/LICENSE for the license information.
+# This file is part of https://github.com/hyperledger-indy/indy-node-container .
+# Copyright 2021-2025 by all people listed in https://github.com/hyperledger-indy/indy-node-container/blob/main/NOTICE , see
+# https://github.com/hyperledger-indy/indy-node-container/blob/main/LICENSE for the license information.
 
 
 FROM ubuntu:22.04
 
-LABEL org.opencontainers.image.description="Ubuntu 22.04 based image to run indy-node. See https://github.com/hyperledger/indy-node-container"
+LABEL org.opencontainers.image.description="Ubuntu 22.04 based image to run indy-node. See https://github.com/hyperledger-indy/indy-node-container"
 
 ARG PRESEED_TIMEZONE_AREA "tzdata tzdata/Areas select Europe"
 ARG PRESEED_TIMEZONE "tzdata tzdata/Zones/Europe select Berlin"
@@ -66,10 +66,10 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 9692C00E65
 
 # official indy node + plenum release packages from github
 RUN cd /tmp/\
-    && for URL in https://github.com/hyperledger/indy-plenum/releases/download/v1.13.1/third-party-dependencies.zip \
-    https://github.com/hyperledger/indy-plenum/releases/download/v1.13.1/plenum-deb.zip \
-    https://github.com/hyperledger/indy-node/releases/download/v1.13.2/third-party-dependencies.zip \
-    https://github.com/hyperledger/indy-node/releases/download/v1.13.2/indy_node-deb.zip \
+    && for URL in https://github.com/hyperledger-indy/indy-plenum/releases/download/v1.13.1/third-party-dependencies.zip \
+    https://github.com/hyperledger-indy/indy-plenum/releases/download/v1.13.1/plenum-deb.zip \
+    https://github.com/hyperledger-indy/indy-node/releases/download/v1.13.2/third-party-dependencies.zip \
+    https://github.com/hyperledger-indy/indy-node/releases/download/v1.13.2/indy_node-deb.zip \
     ; do \
      echo "downloading $URL" \
      && wget -nv $URL \

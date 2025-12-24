@@ -114,7 +114,7 @@ services:
       - LEDGER_INSTANCE_NAME=Local Test Ledger
       - WEB_ANALYTICS_SCRIPT=
       - INFO_SITE_TEXT=Node Container @ GitHub
-      - INFO_SITE_URL=https://github.com/hyperledger/indy-node-container
+      - INFO_SITE_URL=https://github.com/hyperledger-indy/indy-node-container
       - LEDGER_SEED=000000000000000000000000Steward1
     networks:
       indy_node_container_test_network:

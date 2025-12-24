@@ -12,7 +12,7 @@ avoid frustration later on.
 ## Contribution Guideline
 
 * We use the GitHub [issue
-  tracker](https://github.com/IDunion/indy-node-container/issues).
+  tracker](https://github.com/hyperledger-indy/indy-node-container/issues).
 
 * When you want to submit a patch, you must [sign your
   commits](#sign-your-work).

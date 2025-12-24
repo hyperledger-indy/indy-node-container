@@ -1,13 +1,13 @@
 # Indy Node Container
 
-[![Building All Containers](https://github.com/hyperledger/indy-node-container/actions/workflows/build-all.yml/badge.svg)](https://github.com/hyperledger/indy-node-container/actions/workflows/build-all.yml)
+[![Building All Containers](https://github.com/hyperledger-indy/indy-node-container/actions/workflows/build-all.yml/badge.svg)](https://github.com/hyperledger-indy/indy-node-container/actions/workflows/build-all.yml)
 
-This repository aims to provide easy-to-use containers with minimal dependencies to run instances of [Hyperledger Indy Node](https://github.com/hyperledger/indy-node). The primary goal is to support stewards joining an existing Network, but of course the containers can also be used in a stand alone (local/test/...) network. The initial contributions stem from the Container Working Group of [ID Union](https://github.com/IDunion). The repository was contributed to Hyperledger in 2022-02.
+This repository aims to provide easy-to-use containers with minimal dependencies to run instances of [Hyperledger Indy Node](https://github.com/hyperledger-indy/indy-node). The primary goal is to support stewards joining an existing Network, but of course the containers can also be used in a stand alone (local/test/...) network. The initial contributions stem from the Container Working Group of [ID Union](https://github.com/IDunion). The repository was contributed to Hyperledger in 2022-02.
 
 Primary artifact are the container images for
 
-- [Indy Node](https://github.com/hyperledger/indy-node-container/pkgs/container/indy-node-container%2Findy_node)
-- and the [Indy Node Controller](https://github.com/hyperledger/indy-node-container/pkgs/container/indy-node-container%2Findy_node_controller)
+- [Indy Node](https://github.com/hyperledger-indy/indy-node-container/pkgs/container/indy-node-container%2Findy_node)
+- and the [Indy Node Controller](https://github.com/hyperledger-indy/indy-node-container/pkgs/container/indy-node-container%2Findy_node_controller)
  which are build from the files in [the build folder](build/).
 
 We also provide a few [utility scripts, including a docker-compose file](run/) to help setting up a run time environment for the containers.
@@ -17,7 +17,7 @@ See [here](run/) for instructions how to setup and run the indy node images from
 
 We are providing indy node images tagged like`${INDY_NODE_VERSION}-${OS}-${CONTAINER_RELEASE_VERSION}`. E.g. `1.13.2-debian11-1.2.7` is a Debian 11 based image with indy-node version `1.13.2`.
 
-- [See here](https://github.com/hyperledger/indy-node-container/pkgs/container/indy-node-container%2Findy_node/versions?filters%5Bversion_type%5D=tagged) for all tagged versions
+- [See here](https://github.com/hyperledger-indy/indy-node-container/pkgs/container/indy-node-container%2Findy_node/versions?filters%5Bversion_type%5D=tagged) for all tagged versions
 
 We have stopped providing older indy-node versions, new releases are only build for indy 1.13.2. We currently build from the base images
 
@@ -47,7 +47,7 @@ make ubuntu20
 make clean
 ```
 
-Please note that `make` generates different tags than the Github action (see [packages](https://github.com/hyperledger/indy-node-container/pkgs/container/indy-node-container%2Findy_node) vs. [Makefile](./Makefile)).
+Please note that `make` generates different tags than the Github action (see [packages](https://github.com/hyperledger-indy/indy-node-container/pkgs/container/indy-node-container%2Findy_node) vs. [Makefile](./Makefile)).
 
 If you have [trivy](https://aquasecurity.github.io/trivy) installed, you can use the make check_* targets to run a trivy check against the local images:
 
