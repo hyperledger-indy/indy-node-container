@@ -14,6 +14,7 @@ RUN apt-get update -y \
     apt-transport-https \
     ca-certificates \
     gnupg2 \
+    iproute2 \
     ## ToDo remove unused packages
     libgflags-dev \
     libsnappy-dev \
