@@ -4,7 +4,7 @@
 # https://github.com/hyperledger-indy/indy-node-container/blob/main/LICENSE for the license information.
 
 
-FROM ubuntu:22.04
+FROM ubuntu:26.04
 
 LABEL org.opencontainers.image.description="Ubuntu 22.04 based image to run indy-node. See https://github.com/hyperledger-indy/indy-node-container"
 
